@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if title %} {{title}} {%else%} AUTHENTIFICATION {%endif%}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+   
+    <h1> Veillez vous enregistrez chez Mel'Store</h1>
+    <form  method="POST" >
+    
+        <label for="nom">Nom:<input type="text" id="nom" name="nom" placeholder="Entrez le nom">
+        </label></br></br>
+       
+        <label for="email">Email:<input type="email" id="email" name="email" placeholder="Entrez l'email">
+        </label></br></br>
+      
+        <label for="password">Mot de passe:<input type="password" id="password" name="password" placeholder="Entrez le mot de passe">
+        </label></br></br>
+      
+        <label for="password2">Confirmation du mot de passe:<input type="password2" id="password2" name="password2" placeholder="confirmer le mot de passe">
+        </label></br></br>
+      
+        <input type="submit" value="Envoyer">
+        <input type="reset" value="Annuler">
+        <h6>Avez vous déjà un compte?<a href="/login">   Connectez vous</a></h6>
+        <h6>Retournez à l'accueil<a href="/">   ACCUEIL</a></h6>
+      </form>
+</body>
+</html>

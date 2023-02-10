@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if title %} {{title}} {%else%} CONNEXION{%endif%}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    {% include "partials/_navbar2.html" %}
+
+    <h1>Connexion</h1>
+    <form  method="POST" action="">
+      <label for="email">Adresse email:</label>
+      <input type="email" id="email" name="email" placeholder="Entrez l'email"><br><br>
+      <label for="password">Mot de passe:</label>
+      <input type="password" id="password" name="password" placeholder="Entrez le mot de passe"><br><br>
+      <input type="submit" value="Connexion">
+    </form>
+
+</body>
+</html>
